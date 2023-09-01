@@ -1,0 +1,95 @@
+.team {
+  background-color: #f5f4fa;
+}
+
+.team__list {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    @include flex-centered();
+  }
+}
+.team__item {
+  text-align: center;
+  background-color: $primary-white-color;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+
+  &:not(:last-child) {
+    @media screen and (max-width: 767px) {
+      margin-bottom: 30px;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    width: calc((100% - 30px) / 2);
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: calc((100% - 90px) / 4);
+  }
+}
+/* .team-item {
+  flex-basis: calc(100% / 4 - 30px);
+  margin-left: 30px;
+  background-color: #fff;
+} */
+.employeer-card {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.team__name {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+  margin-bottom: 10px;
+  color: $title-color;
+}
+.team__pos {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+  color: $basic-color;
+  margin-bottom: 16px;
+}
+
+.team-network {
+  @include flex-centered();
+}
+.team-network__item {
+  width: 44px;
+  height: 44px;
+  margin-right: 10px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.team-network__link {
+  @include flex-centered();
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  color: $icon-color;
+  transition: background-color $timing-duration $timing-function,
+    color $timing-duration $timing-function;
+
+  &:hover,
+  &:focus {
+    background-color: $brand-accent;
+    color: $primary-white-color;
+  }
+}
+
+.team-network__icon {
+  fill: currentColor;
+}

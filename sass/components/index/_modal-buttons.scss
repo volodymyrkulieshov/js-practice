@@ -1,0 +1,40 @@
+// --------------BTN-CLOSE------------------
+.modal-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+
+  @include flex-centered();
+  background-color: transparent;
+  cursor: pointer;
+  transition: fill $timing-duration $timing-function;
+
+  &:hover {
+    fill: $brand-accent;
+  }
+}
+// --------------BTN-SUBMIT-----------------
+.modal-form__submit {
+  @include flex-centered();
+  margin: auto;
+
+  width: 200px;
+  height: 50px;
+  padding: 0;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+
+  letter-spacing: 0.06em;
+  color: $primary-white-color;
+  background-color: $brand-accent;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  transition: background-color $timing-duration $timing-function;
+}

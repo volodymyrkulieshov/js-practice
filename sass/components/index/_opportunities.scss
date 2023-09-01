@@ -1,0 +1,46 @@
+.opportunities {
+  padding-top: 0;
+
+  @media screen and (max-width: 1200px) {
+    display: none;
+  }
+}
+
+.opportunities__title {
+  margin-bottom: 50px;
+}
+.opportunities__list {
+  @include flex-centered();
+
+  /* margin-left: -30px; */
+}
+
+/* .opportunities-item {
+
+  flex-basis: calc(100% / 3 - 30px);
+  margin-left: 30px;
+} */
+
+.opportunities__item {
+  position: relative;
+
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+.opportunities__text {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  @include flex-centered();
+  width: 100%;
+  height: 70px;
+
+  color: $primary-white-color;
+  background-color: rgba(47, 48, 58, 0.8);
+  padding: 27px 0;
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 1.14;
+}

@@ -1,0 +1,14 @@
+.header {
+  border-bottom: 1px solid $border-header;
+  @media screen and (max-width: 767px) {
+    position: sticky;
+    z-index: 10;
+    top: 0;
+    background-color: $primary-white-color;
+  }
+}
+
+.header__container {
+  display: flex;
+  align-items: center;
+}

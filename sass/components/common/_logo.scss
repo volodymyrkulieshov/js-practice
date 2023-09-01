@@ -1,0 +1,34 @@
+.logo {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.2;
+  color: $brand-accent;
+}
+
+.logo__header {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  margin-right: auto;
+  // color: $title-color;
+
+  @include tablet {
+    margin-right: 88px;
+    padding-top: 26px;
+    padding-bottom: 26px;
+  }
+
+  @include desktop {
+    margin-right: 93px;
+    padding-top: 24px;
+    padding-bottom: 25px;
+  }
+}
+
+.logo__black {
+  color: #000000;
+}
+
+.logo-white {
+  color: $primary-white-color;
+}
