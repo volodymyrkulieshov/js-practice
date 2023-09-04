@@ -106,24 +106,24 @@
 // Якщо масив товарів порожній, функція повинна викликати колбек onError, передаючи йому рядок "No products found".
 // Для форматування середньої ціни використовується метод toFixed(2), щоб обмежити число до двох десяткових знаків.
 
-const products = [
-  { name: "Apple", price: 0.99 },
-  { name: "Banana", price: 0.49 },
-  { name: "Orange", price: 0.79 },
-  { name: "Mango", price: 1.99 },
-];
-function calculateAveragePrice(products, onSuccess, onError) {
-  //  products.length === 0
-  if (!products.length) {
-    onError("No products found");
-  }
-  let total = 0;
-  products.forEach(({ price }) => (total += price));
-  onSuccess(total / products.length);
-}
-const onSuccess = (averagePrice) =>
-  console.log("Average price: ", averagePrice.toFixed(2));
+// const products = [
+//   { name: "Apple", price: 0.99 },
+//   { name: "Banana", price: 0.49 },
+//   { name: "Orange", price: 0.79 },
+//   { name: "Mango", price: 1.99 },
+// ];
+// function calculateAveragePrice(products, onSuccess, onError) {
+//   //  products.length === 0
+//   if (!products.length) {
+//     onError("No products found");
+//   }
+//   let total = 0;
+//   products.forEach(({ price }) => (total += price));
+//   onSuccess(total / products.length);
+// }
+// const onSuccess = (averagePrice) =>
+//   console.log("Average price: ", averagePrice.toFixed(2));
 
-const onError = (errorMessage) => console.log("Error: ", errorMessage);
+// const onError = (errorMessage) => console.log("Error: ", errorMessage);
 
-calculateAveragePrice(products, onSuccess, onError);
+// calculateAveragePrice(products, onSuccess, onError);
