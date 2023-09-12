@@ -7,7 +7,7 @@
 // class Rectangle {
 //   #width;
 //   #height;
-//   constructor({ width, height }) {
+//   constructor({ width, height }={}) {
 //     this.#width = width;
 //     this.#height = height;
 //   }
@@ -178,3 +178,96 @@
 // instance.deposit(1200);
 // instance.withdraw(100);
 // console.log(instance);
+
+// Previous group
+
+// Example 1 - Блогер
+// Напиши клас Blogger для створення об'єкта блогера з наступними властивостями:
+
+// email - пошта, рядок
+// age - вік, число
+// numberOfPosts - кількість постів, число
+// topics - масив тем на яких спеціалізується блогер
+// Клас чекає один параметр - об'єкт налаштувань з однойменними властивостями.
+
+// Додай метод getInfo(), який, повертає рядок:
+// User ${ пошта } is ${ вік } years old and has ${кількість постів } posts.
+
+// Додай метод updatePostCount(value), який у параметрі value приймає
+// кількість постів, які потрібно додати користувачеві.
+// class Blogger {
+//   constructor({ email, age, numberOfPosts, topics } = {}) {
+//     this.email = email;
+//     this.age = age;
+//     this.numberOfPosts = numberOfPosts;
+//     this.topics = topics;
+//   }
+//   getInfo() {
+//     return `Blogger ${this.email} is ${this.age} years old and has ${this.numberOfPosts} posts. Популярні теми: ${this.topics}`;
+//   }
+//   updatePostCount(value) {
+//     this.numberOfPosts += value;
+//   }
+// }
+
+// const mango = new Blogger({
+//   email: "mango@mail.com",
+//   age: 24,
+//   numberOfPosts: 20,
+//   topics: ["tech", "cooking"],
+// });
+// console.log(mango);
+// console.log(mango.getInfo()); // User mango@mail.com is 24 years old and has 20 posts
+// mango.updatePostCount(5);
+// console.log(mango.getInfo()); // User mango@mail.com is 24 years old and has 25 posts
+
+// const poly = new Blogger({
+//   email: "poly@mail.com",
+//   age: 19,
+//   numberOfPosts: 17,
+//   topics: ["sports", "gaming", "health"],
+// });
+// console.log(poly.getInfo()); // User poly@mail.com is 19 years old and has 17 posts
+// poly.updatePostCount(4);
+// console.log(poly.getInfo()); // User poly@mail.com is 19 years old and has 21 posts
+
+// Example 2 - Сховище
+// Напиши клас Storage який створює об'єкти для керування складом товарів.
+// При виклику отримуватиме один аргумент - початковий масив товарів
+// і записуватиме його властивість items.
+
+// Додай методи класу:
+
+// getItems() - повертає масив товарів.
+// addItem(item) - отримує новий товар і додає його до поточних.
+// removeItem(item) - отримує товар і, якщо він є, видаляє його з поточних.
+
+// class Storage {
+//   constructor(items) {
+//     this.items = items;
+//   }
+//   getItems() {
+//     return this.items;
+//   }
+//   addItem(item) {
+//     if (!items.includes(item)) {
+//       items.push(item);
+//     }
+//   }
+//   removeItem(item) {
+//     const index = this.items.indexOf(item);
+//     if (!!~index) {
+//       this.items.splice(index, 1);
+//     }
+//   }
+// }
+// const storage = new Storage(["🍎", "🍋", "🍇", "🍑"]);
+
+// const items = storage.getItems();
+// console.table(items); // [ '🍎', '🍋', '🍇', '🍑' ]
+
+// storage.addItem("🍌");
+// console.table(storage.items); // [ '🍎', '🍋', '🍇', '🍑', '🍌' ]
+
+// storage.removeItem("🍋");
+// console.table(storage.items); // [ '🍎', '🍇', '🍑', '🍌' ]
