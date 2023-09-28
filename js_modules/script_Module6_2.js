@@ -50,7 +50,7 @@ const cars = [
   },
 ];
 
-// CREATE PATERN OBJECT SELECTORS ДЛЯ ЛЕГШОГО ЗВЕРНЕННЯ ДО ЕЛЕМЕНТІВ РОЗІМТКИ//-------------
+// // CREATE PATERN OBJECT SELECTORS ДЛЯ ЛЕГШОГО ЗВЕРНЕННЯ ДО ЕЛЕМЕНТІВ РОЗІМТКИ//-------------
 const elements = {
   form: document.querySelector(".js-form"),
   container: document.querySelector(".js-list"),
@@ -82,41 +82,3 @@ function handlerSubmit(evt) {
   elements.container.innerHTML = createMarkup(result);
   evt.currentTarget.reset();
 }
-
-// const elements = {
-//   form: document.querySelector(".js-form"),
-//   container: document.querySelector(".js-list"),
-// };
-// console.log(elements.form);
-
-// elements.container.insertAdjacentHTML("afterbegin", createMarkup(cars));
-// // elements.form.addEventListener("submit", handlerSearch);
-
-// function createMarkup(arr) {
-//   return arr
-//     .map(
-//       ({ id, car, type, price, img }) => `
-//     <li class="car-card" data-car-id="${id}">
-//         <img src="${img}" alt="${car}" class="car-image">
-//         <h2 class="car-title">${car}</h2>
-//         <h3 class="car-type">${type}</h3>
-//         <span class="car-price">${price} $</span>
-//     </li>`
-//     )
-//     .join("");
-// }
-
-// function handlerSearch(evt) {
-//   evt.preventDefault();
-
-//   const { query, options } = evt.currentTarget.elements;
-//   const queryValue = query.value.toLowerCase();
-//   const key = options.value;
-//   const result = cars.filter((car) =>
-//     car[key].toLowerCase().includes(queryValue)
-//   ); // startsWith
-
-//   elements.container.innerHTML = createMarkup(result);
-
-//   evt.currentTarget.reset();
-// }
